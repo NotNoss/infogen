@@ -1,1 +1,4 @@
 domain = "example.com"
+
+[api]
+key = "ChangeMe"

@@ -1,4 +1,4 @@
-module github.com/NotNoss/mail-alias
+module github.com/NotNoss/infogen
 
 go 1.22.5
 

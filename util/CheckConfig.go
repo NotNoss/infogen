@@ -10,8 +10,8 @@ import (
 func CheckConfig() {
 	username := GetUser()
 
-	dirPath := fmt.Sprintf("/home/%s/.config/mail-alias/", username)
-	filePath := fmt.Sprintf("/home/%s/.config/mail-alias/config.toml", username)
+	dirPath := fmt.Sprintf("/home/%s/.config/infogen/", username)
+	filePath := fmt.Sprintf("/home/%s/.config/infogen/config.toml", username)
 
 	_, err := os.Stat(dirPath)
 	if err != nil {
@@ -21,7 +21,7 @@ func CheckConfig() {
 	_, err = os.Stat(filePath)
 	if err != nil {
 
-		response, err := http.Get("https://raw.githubusercontent.com/NotNoss/mail-alias/main/example-config.toml")
+		response, err := http.Get("https://raw.githubusercontent.com/NotNoss/infogen/main/example-config.toml")
 		if err != nil {
 			fmt.Println(err)
 		}
